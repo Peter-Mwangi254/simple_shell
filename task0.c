@@ -12,12 +12,12 @@ int interactive(info_t *info)
 }
 
 /**
- *_naya - checks for alphabetic character
+ *_isalpha - checks for alphabetic character
  *@k: The character to input
  *Return: 1 if k is alphabetic, 0 otherwise
  */
 
-int _naya(int k)
+int _isalpha(int k)
 
 {
 	if ((k >= 'a' && k <= 'z') || (k >= 'A' && k <= 'Z'))
@@ -28,26 +28,26 @@ int _naya(int k)
 	}
 
 /**
- * is_mwangi - checks if character is a delimeter
+ * is_delim - checks if character is a delimeter
  * @k: the char to check
- * @mwangi: the delimeter string
+ * @delim: the delimeter string
  * Return: 1 if true, 0 if false
  */
-int is_mwangi(char k, char *mwangi)
+int is_delim(char k, char *delim)
 {
-	while (*mwangi)
-		if (*mwangi++ == k)
+	while (*delim)
+		if (*delim++ == k)
 			return (1);
 	return (0);
 }
 
 /**
- *_my_special_aggy - converts a string to an integer
+ *_atoi - converts a string to an integer
  *@t: the string to be converted
  *Return: 0 if no numbers in string, converted number otherwise
  */
 
-int _my_special_aggy(char *t)
+int _atoi(char *t)
 {
 	int f, sign = 1, flag = 0, output;
 	unsigned int result = 0;
