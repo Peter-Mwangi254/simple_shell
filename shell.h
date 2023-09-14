@@ -38,10 +38,14 @@
 
 /* task0.c prototypes*/
 int interactive(info_t *);
-int is_mwangi(char, char *);
-int _naya(int);
-int _my_special_aggy(char *);
+int is_delim(char, char *);
+int _isalpha(int);
+int _atoi(char *);
 
+/*_built.c prototypes*/
+int  my_special_exit(info_t *info);
+int command_cd(info_t *info);
+int my_help(info_t *info);
 
 
 
