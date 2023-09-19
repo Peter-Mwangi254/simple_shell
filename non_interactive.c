@@ -8,18 +8,18 @@
 
 void non_interactive_mode(void)
 {
-	char *buffer;
+	char *line;
 	char **args;
 	int status = -1;
 
 	while (1)
 	{
-		buffer = read_line();
-		args = tokenize(buffer);
-		status = exec_builtin(args);
+		line = read_stream();;
+		args = split_line(line);
+		status = execute_args(args);
 
 		/* avoid memory leaks */
-		free(buffer);
+		free(line);
 		free(args);
 
 		/* exit with status */

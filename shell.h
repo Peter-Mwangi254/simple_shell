@@ -13,25 +13,16 @@
 #include <fcntl.h>
 #include <errno.h>
 
-#define READ_BUF_SIZE 1024
-#define WRITE_BUF_SIZE 1024
-#define BUF_FLUSH -1
+/*------PROTOTYPES--------*/
+void interactive_shell(void);
+void non_interactive_shell(void);
 
-#define CONVERT_LOWERCASE	1
-#define CONVERT_UNSIGNED	2
+/*interactive_shell.c*/
+char *read_line(void);
+char **split_line(char *line);
+int execute_args(char **args);
+int prompt_user(void);
 
-
-/* my prototypes*/
-
-/* task0.c prototypes*/
-int interactive(info_t *);
-int is_delim(char, char *);
-int _isalpha(int);
-int _atoi(char *);
-
-/*_built.c prototypes*/
-int  my_special_exit(info_t *info);
-int command_cd(info_t *info);
-int my_help(info_t *info);
-
+/*non_interactive_shell*/
+char *read_stream(void);
 #endif
