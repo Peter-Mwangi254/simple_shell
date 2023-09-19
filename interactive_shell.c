@@ -1,12 +1,13 @@
 #include "shell.h"
 /**
  * interactive_shell - function that handles commands from command line
- * @line : 
+ * Return: void
+ */ 
 void interactive_shell(void)
 {
     char *line;
     char **args;
-    int status;
+    int status = -1;
 while (1)
 {
     prompt_user();
