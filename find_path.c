@@ -17,7 +17,7 @@ char *find_path(char *arg)
 		pathTok = strtok(cpy_path, delimeter);
 		while (pathTok)
 		{
-			fileName = malloc(strlen(arg) + strlen(pathTok) + 2);
+			fileName = malloc(_strlen(arg) + _strlen(pathTok) + 2);
 			strcpy(fileName, pathTok);
 			strcat(fileName, "/");
 			strcat(fileName, arg);
