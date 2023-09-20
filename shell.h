@@ -20,9 +20,12 @@ void non_interactive_shell(void);
 /*interactive_shell.c*/
 char *read_line(void);
 char **split_line(char *line);
-int exec_built(char **args);
+int exec_builtin(char **args);
 int prompt_user(void);
 char *find_path(char *arg);
+int execute_cmd(char **args, int cmd_num);
+void print_err(int cmd_no, char *prog_name);
+int print_num(unsigned int n);
 
 /*non_interactive_shell*/
 char *read_stream(void);

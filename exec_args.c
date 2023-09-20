@@ -34,5 +34,5 @@ int exec_built(char **args)
 	}
 	/* create a new process */
 	cmd_num++;
-	return (execute_args(args, cmd_num));
+	return (execute_cmd(args, cmd_num));
 }
