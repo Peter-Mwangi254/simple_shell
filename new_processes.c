@@ -18,7 +18,7 @@ int execute_cmd(char **args, int cmd_num)
 		av = find_path(cmd);
 		if (av == NULL)
 		{
-			print_err(cmd_num, prog_name);
+		_printerr(cmd_num, prog_name);
 			_putstr(args[0], STDERR_FILENO);
 			_putstr(": not found\n", STDERR_FILENO);
 			return (127);
@@ -29,7 +29,7 @@ int execute_cmd(char **args, int cmd_num)
 			exe = execve(av, args, environ);
 			if (exe == -1)
 			{
-				print_err(cmd_num, prog_name);
+				_printerr(cmd_num, prog_name);
 				_putstr(strerror(errno), STDERR_FILENO);
 				write(STDERR_FILENO, strerror(errno), strlen(strerror(errno)));
 			}

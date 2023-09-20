@@ -1,13 +1,13 @@
 #include "shell.h"
 
 /**
- * execute_args - function to execute builtin args
+ * exec_built - function to execute builtin args
  * @args: command to execute
  *
  * Return: executed command
  */
 
-int execute_args(char **args)
+int exec_built(char **args)
 {
 	static int cmd_num;
 	char *builtin_funcs[] = {"env", "cd", "exit",};
@@ -27,7 +27,7 @@ int execute_args(char **args)
 	/*check if command is inbuilt*/
 	for (; i < sizeof(builtin_funcs) / sizeof(char *); i++)
 	{
-		if (_strcmp(args[0], builtin_funcs[i]) == 0)
+		if (strcmp(args[0], builtin_funcs[i]) == 0)
 		{
 			return ((*builtin_func[i])(args));
 		}

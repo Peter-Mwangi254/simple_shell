@@ -13,7 +13,7 @@ while (1)
 	prompt_user();
 	line = read_line();
 	args = split_line(line);
-	status = execute_args(args);
+	status = exec_args(args);
 	free(line);
 	free(args);
 	if (status >= 0)

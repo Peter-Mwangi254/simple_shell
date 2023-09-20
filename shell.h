@@ -20,7 +20,7 @@ void non_interactive_shell(void);
 /*interactive_shell.c*/
 char *read_line(void);
 char **split_line(char *line);
-int execute_args(char **args);
+int exec_built(char **args);
 int prompt_user(void);
 char *find_path(char *arg);
 
@@ -42,7 +42,7 @@ int env(char **args);
 int my_exit(char **args);
 
 /*-------MACROS--------*/
-#define DELIM " \t\r\n\a\""
+#define DELIMETER " \t\r\n\a\""
 #define PROMPT "$ "
 extern int cmd_num;
 extern char **environ;
