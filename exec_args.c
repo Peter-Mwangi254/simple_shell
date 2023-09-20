@@ -27,7 +27,7 @@ int execute_args(char **args)
 	/*check if command is inbuilt*/
 	for (; i < sizeof(builtin_funcs) / sizeof(char *); i++)
 	{
-		if (str_cmp(args[0], builtin_funcs[i]) == 0)
+		if (_strcmp(args[0], builtin_funcs[i]) == 0)
 		{
 			return ((*builtin_func[i])(args));
 		}

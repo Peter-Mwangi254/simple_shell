@@ -25,4 +25,8 @@ int prompt_user(void);
 
 /*non_interactive_shell*/
 char *read_stream(void);
+
+/*handle strings*/
+int _strcmp(char *s1, char *s2)
+
 #endif
