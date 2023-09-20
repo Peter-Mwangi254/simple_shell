@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * non_interactive_mode - Function for non-interactive mode execution
+ * non_interactive_shell - Function for non-interactive mode execution
  *
  * Return: void
  */
@@ -14,7 +14,7 @@ void non_interactive_shell(void)
 
 	while (1)
 	{
-		line = read_stream();;
+		line = read_stream();
 		args = split_line(line);
 		status = exec_builtin(args);
 

@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * exec_built - function to execute builtin args
+ * exec_builtin - function to execute builtin args
  * @args: command to execute
  *
  * Return: executed command
