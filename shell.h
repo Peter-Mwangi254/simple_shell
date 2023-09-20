@@ -43,7 +43,7 @@ int my_exit(char **args);
 
 /*-------MACROS--------*/
 #define DELIM " \t\r\n\a\""
-
+#define PROMPT "$ "
 extern int cmd_num;
 extern char **environ;
 extern char *prog_name;
