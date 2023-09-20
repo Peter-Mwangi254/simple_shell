@@ -13,15 +13,15 @@ char *find_path(char *arg)
 	path = getenv("PATH");
 	if (path != NULL)
 	{
-		cpy_path = str_dup(path);
+		cpy_path = strdup(path);
 		pathTok = strtok(cpy_path, delimeter);
 		while (pathTok)
 		{
-			fileName = malloc(str_len(arg) + str_len(pathTok) + 2);
-			str_cpy(fileName, pathTok);
-			str_cat(fileName, "/");
-			str_cat(fileName, arg);
-			str_cat(fileName, "\0");
+			fileName = malloc(strlen(arg) + strlen(pathTok) + 2);
+			strcpy(fileName, pathTok);
+			strcat(fileName, "/");
+			strcat(fileName, arg);
+			strcat(fileName, "\0");
 
 			/*check if path exist*/
 			if (stat(fileName, &args_line) == 0)

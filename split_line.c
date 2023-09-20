@@ -21,7 +21,7 @@ char **split_line(char *line)
 		perror("memory allocation error\n");
 		exit(EXIT_FAILURE);
 	}
-	token = strtok(line, DELIMETER);
+	token = strtok(line,DELIMETER);
 	while (token != NULL)
 	{
 

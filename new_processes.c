@@ -31,7 +31,7 @@ int execute_cmd(char **args, int cmd_num)
 			{
 				print_err(cmd_num, prog_name);
 				_putstr(strerror(errno), STDERR_FILENO);
-				write(STDERR_FILENO, strerror(errno), str_len(strerror(errno)));
+				write(STDERR_FILENO, strerror(errno), strlen(strerror(errno)));
 			}
 		}
 		else if (child_pid < 0)

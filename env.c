@@ -13,7 +13,7 @@ int env(char **args)
 
 	while (environ[index])
 	{
-		write(STDOUT_FILENO, environ[index], str_len(environ[index]));
+		write(STDOUT_FILENO, environ[index], strlen(environ[index]));
 		write(STDOUT_FILENO, "\n", 1);
 		index++;
 	}
