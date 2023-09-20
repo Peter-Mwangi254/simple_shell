@@ -22,11 +22,29 @@ char *read_line(void);
 char **split_line(char *line);
 int execute_args(char **args);
 int prompt_user(void);
+char *find_path(char *arg);
 
 /*non_interactive_shell*/
 char *read_stream(void);
 
 /*handle strings*/
-int _strcmp(char *s1, char *s2)
+int _strcmp(char *s1, char *s2);
+char *_strcat(char *dest, char *src);
+char *_strcpy(char *dest, char *src);
+char *_strdup(char *str);
+int _strlen(char *str);
+int _putstr(char *str, int fd);
+int _putchar(char z);
 
+/*-------BUILTIN FUNCTIONS-----*/
+int my_cd(char **args);
+int env(char **args);
+int my_exit(char **args);
+
+/*-------MACROS--------*/
+#define DELIM " \t\r\n\a\""
+
+extern int cmd_num;
+extern char **environ;
+extern char *prog_name;
 #endif
