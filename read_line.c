@@ -10,7 +10,7 @@ char *read_line(void)
 	size_t buffsize = 0;
 	size_t len;
 
-	if (getline(&line, &buffsize, stdin) == -1)
+	if (_getline(&line, &buffsize, stdin) == -1)
 	{
 		if (feof(stdin))
 		{

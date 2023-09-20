@@ -26,6 +26,7 @@ char *find_path(char *arg);
 int execute_cmd(char **args, int cmd_num);
 void print_err(int cmd_no, char *prog_name);
 int print_num(unsigned int n);
+char *_getline(char **cmd, FILE *stream)
 
 /*non_interactive_shell*/
 char *read_stream(void);
