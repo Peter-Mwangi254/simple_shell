@@ -6,7 +6,7 @@
  * Return: void
  */
 
-void non_interactive_mode(void)
+void non_interactive_shell(void)
 {
 	char *line;
 	char **args;

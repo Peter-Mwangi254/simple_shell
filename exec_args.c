@@ -7,7 +7,7 @@
  * Return: executed command
  */
 
-int exec_built(char **args)
+int exec_builtin(char **args)
 {
 	static int cmd_num;
 	char *builtin_funcs[] = {"env", "cd", "exit",};
