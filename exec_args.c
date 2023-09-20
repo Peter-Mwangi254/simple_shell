@@ -1,13 +1,13 @@
 #include "shell.h"
 
 /**
- * exec_builtin - function to execute builtin args
+ * exec_cmd - function to execute builtin args
  * @args: command to execute
  *
  * Return: executed command
  */
 
-int exec_builtin(char **args)
+int exec_cmd(char **args)
 {
 	static int cmd_num;
 	char *builtin_funcs[] = {"env", "cd", "exit",};

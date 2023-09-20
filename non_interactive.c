@@ -16,7 +16,7 @@ void non_interactive_shell(void)
 	{
 		line = read_stream();
 		args = split_line(line);
-		status = exec_builtin(args);
+		status = exec_cmd(args);
 
 		/* avoid memory leaks */
 		free(line);
